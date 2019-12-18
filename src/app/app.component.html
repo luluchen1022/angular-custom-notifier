@@ -1,0 +1,16 @@
+<h1>"angular-notifier" demo</h1>
+
+<h2>Show notifications</h2>
+
+<button class="button button--secondary" (click)="customNotification( 'info', 'message' ,'title')">
+	123
+</button>
+<test></test>
+<notifier-container></notifier-container>
+
+<ng-template default-notify let-notification="notification">
+	<div>
+		<strong>{{ notification.id}}</strong>
+		<div>{{ notification.message }}</div>
+	</div>
+</ng-template>
