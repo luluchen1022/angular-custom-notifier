@@ -8,11 +8,11 @@ import { NotifierNotificationOptions } from 'angular-notifier/src/models/notifie
 })
 export class CustomNotifyService {
 
-  public defaultTemplate: TemplateRef<any>
+  public static defaultTemplate: TemplateRef<any>
 
   public constructor(private notifier: NotifierService) { }
 
   public notify(notifierNotificationOptions: NotifierNotificationOptions): void {
-    this.notifier.show({ template: this.defaultTemplate, ...notifierNotificationOptions });
+    this.notifier.show({ template: CustomNotifyService.defaultTemplate, ...notifierNotificationOptions });
   }
 }

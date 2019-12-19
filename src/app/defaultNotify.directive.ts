@@ -5,7 +5,7 @@ import { CustomNotifyService } from "./notifier-custom.service";
     selector: "ng-template[default-notify]"
 })
 export class DefaultNotifyDirective {
-    constructor(templateRef: TemplateRef<any>, customNotifyService: CustomNotifyService) {
-        customNotifyService.defaultTemplate = templateRef;
+    constructor(templateRef: TemplateRef<any>) {
+        CustomNotifyService.defaultTemplate = templateRef;
     }
 }
